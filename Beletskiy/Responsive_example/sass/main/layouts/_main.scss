@@ -1,0 +1,13 @@
+/* Main content */
+
+.main {
+	overflow: hidden;
+	height: 500px;
+	background-color: $generalBgColor;
+	margin-bottom: 20px;
+	padding: $mainPadding;
+}
+
+@media screen and (max-width: $tabletDeviceWidth) {
+		margin-bottom: 20px;
+	}
