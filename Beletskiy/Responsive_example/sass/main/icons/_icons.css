@@ -1,0 +1,14 @@
+%icons-sprite {
+	background-url (../img/sprite.png) no-repeat;
+}
+
+$i: 0;
+$j: 0;
+
+@while $i > -$colicons {
+	.icon-#{$j}#{$i} {
+		@extend %iconsSprite;
+		background-position: (-$j * $iconsSize -$i * $iconsSize);
+	}
+	$i: $i + 1;
+}
