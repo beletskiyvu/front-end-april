@@ -1,0 +1,94 @@
+//out: ../css/style.css
+@import "mixins/media";
+@import "fonts";
+
+* {
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+html {
+    @include respond-to(320) {
+        font-size: 75%;
+    }
+    @include respond-to(480) {
+        font-size: 80%;
+    }
+    @include respond-to(768) {
+        font-size: 87.5%;
+    }
+    @include respond-to(992) {
+        font-size: 95%;
+    }
+    @include respond-to(1200) {
+        font-size: 100%;
+    }
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+figure {
+    margin: auto;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 0.300em;
+    right: 0.300em;
+    width: 1.000em;
+    height: 1.000em;
+    z-index: 9999;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 0.500em;
+    background: #4d97e1;
+    transition: opacity 0.2s ease-out;
+    font-size: 3.000em;
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+
+#back-to-top:hover {
+    background: #488dd3;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+%clearfloat {
+    content: "";
+    display: block;
+    clear: both;
+}
+@import "header";
+@import "main";
+@import "footer";
