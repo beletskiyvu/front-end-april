@@ -524,4 +524,4 @@ var ArraysTasks = {
   rangeBetween         : rangeBetween
 };
 */
-//module.exports = ArraysTasks;
+module.exports = ArraysTasks;
