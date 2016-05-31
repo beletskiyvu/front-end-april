@@ -19,9 +19,24 @@ function isArray(item) {
  [1, 2, [4, 0]]
 
  */
-function cloneArray(array) {
+function cloneArray (array)
+isArray(array)
+if (isArray(array)) {
+	var clone = [],
+		i = 0,
+		len = array.length;
+	for (; i < len; i++) {
+		if (array[i].length && array[i].constructor === Array) {
+			clone[i] = cloneArray(array[i]);
+		} else {
+		clone[i] = array[i];
+		}
+	}
+	return clone;
+} else {
+	return throw new Error("Enter an array!");
+}
 
-};
 
 /*
  3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -494,34 +509,3 @@ var ArraysTasks = {
 };
 
 //module.exports = ArraysTasks;
-
-
-
-
-
-
-
-
-
-
-
-/*
-Task2
-function clone (array)
-isArray(array)
-if (isArray(array)) {
-	var clone = [],
-		i = 0,
-		len = array.length;
-	for (i = 0; i < len; i++) {
-		if (array[i].length && array[i].constructor === Array) {
-			clone[i] = cloneArray(array[i]);
-		}
-		clone[i] = array[i];
-	}
-	return clone;
-} else {
-	return throw new Error("Enter an array!");
-}
-
-*/
